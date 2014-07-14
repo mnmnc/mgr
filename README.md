@@ -3,7 +3,7 @@ mgr
 
 masters degree usefull info
 
-/tshark/
+*** /tshark/
 
   field protocols for later selection
   
