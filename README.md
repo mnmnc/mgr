@@ -7,4 +7,12 @@ masters degree usefull info
 
   field protocols for later selection
   
+  - tcp
+  - ip
+  - udp
+  - frame
+  - icmp
+  - dns
+  - ssl
+  - http
   
