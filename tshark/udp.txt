@@ -1,0 +1,17 @@
+Wireshark UDP fields
+
+udp.checksum
+udp.checksum_bad
+udp.checksum_good
+udp.dstport
+udp.length
+udp.port
+udp.proc.dstcmd
+udp.proc.dstpid
+udp.proc.dstuid
+udp.proc.dstuname
+udp.proc.srccmd
+udp.proc.srcpid
+udp.proc.srcuid
+udp.proc.srcuname
+udp.srcport
