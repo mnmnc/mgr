@@ -1,0 +1,17 @@
+tcp selected:
+
+tcp.dstport
+tcp.srcport
+tcp.seq			- rel seq number
+tcp.ack			- ack number
+tcp.flags.fin	- fin
+tcp.flags.ack 	- ack
+tcp.flags.syn 	- syn
+tcp.flags.reset - rst
+tcp.flags.push 	- psh
+tcp.flags.ns	- nonce
+tcp.flags.cwr 	- congestion window reduced
+tcp.flags.ecn	- 
+tcp.flags.res 	- reserved
+tcp.flags.urg 	- urgent
+tcp.analysis.bytes_in_flight  - size of data

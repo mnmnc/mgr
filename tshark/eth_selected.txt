@@ -1,0 +1,6 @@
+eth selected:
+
+eth.dst
+eth.src
+eth.lg			- 0 -> globally unical
+eth.ig			- 0 -> unicast

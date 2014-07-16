@@ -1,0 +1,11 @@
+http selected:
+
+http.request.method
+http.request.uri
+http.request.version
+http.host
+http.response.code
+http.response.phraze
+http.server
+http.content_length_header
+http.referer

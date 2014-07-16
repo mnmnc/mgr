@@ -1,0 +1,11 @@
+icmp selected:
+
+icmp.type		
+			8 -> echo request
+			0 -> echo reply
+			3 -> destination unreachable
+			11 -> TTL exceeded
+icmp.code
+			3 -> port unreachable
+icmp.seq
+icmp.seq_le
