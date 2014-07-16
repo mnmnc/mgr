@@ -1,0 +1,27 @@
+SELECTED
+
+dns selected:
+
+dns.id			- id zapytania, występuje też w odpowiedzi. Konieczna korelacja
+dns.qry.name
+dns.qry.type
+				0x0001 -> A 	- żądanie adresu IP
+				0x000c -> PTR	- żądanie wsaźnika domeny. W odpowiedzi jest pole dns.ptr.domain_name
+				0x00fc -> AXFR	- żądanie transferu strefy
+dns.resp.addr
+dns.resp.type
+				0x0005 -> CNAME - wskazanie aliasu
+				0x000c -> PTR	- żądanie wsaźnika domeny
+				0x0001 -> A 	- wskazanie adresu IP
+dns.count.answers - liczba odpowiedzi. Duża może wskazywać na transfer strefy
+dns.ptr.domain_name  - pole wskazujące domenę po odwrotnym zapytaniu DNS.
+
+=============DNS
+tshark -T fields -E header=y -E separator=, -E occurrence=a -E quote=d -e dns.qry.name -e dns.id -e dns.qry.type -e dns.resp.addr -e dns.resp.type -e dns.count.answers -e dns.ptr.domain_name -R dns
+
+
+"onet.pl","0x64f8","0x0001",,,"0",
+"onet.pl","0x64f8","0x0001","213.180.141.140,213.180.128.240,157.25.5.2,212.76.32.1,213.180.128.242,213.180.137.160,213.180.147.200","0x0001,0x0002,0x0002,0x0002,0x0002,0x0002,0x0002,0x0001,0x0001,0x001c,0x0001,0x001c,0x0001,0x0001,0x0001","1",
+"140.141.180.213.in-addr.arpa","0xdd62","0x000c",,,"0",
+"140.141.180.213.in-addr.arpa","0xdd62","0x000c","213.180.128.242,213.180.137.160,213.180.147.200","0x000c,0x0002,0x0002,0x0002,0x0001,0x0001,0x0001","1","sg1.any.onet.pl"
+================
