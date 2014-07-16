@@ -1,5 +1,3 @@
-SELECTED
-
 dns selected:
 
 dns.id			- id zapytania, występuje też w odpowiedzi. Konieczna korelacja
