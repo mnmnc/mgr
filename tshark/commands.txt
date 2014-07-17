@@ -1,8 +1,0 @@
-Commands:
-
-Capture specific fields:
-	tshark -T fields -E header=y -E separator=, -E occurrence=a -E quote=d -e ip.proto -e ip.src -e ip.dst
-
-tshark -T fields -E header=y -E separator=, -E occurrence=a -E quote=d -e dns.id -e dns.qry.name -e dns.qry.type -e dns.resp.addr -e dns.resp.type -e dns.count.answers -e dns.ptr.domain_name -e eth.dst -e eth.src -e eth.lg -e eth.ig -e frame.time_epoch -e frame.protocolshttp -e http.request.method -e http.request.uri -e http.request.version -e http.host -e http.response.code -e http.response.phraze -e http.server -e http.content_length_header -e http.referer -e icmp.type -e icmp.code -e icmp.seq -e icmp.seq_le -e ip.ttl -e ip.src -e ip.dst -e ip.proto -e tcp.dstport -e tcp.srcport -e tcp.seq -e tcp.ack -e tcp.flags.fin -e tcp.flags.ack -e tcp.flags.syn -e tcp.flags.reset -e tcp.flags.push -e tcp.flags.ns -e tcp.flags.cwr -e tcp.flags.ecn -e tcp.flags.res -e tcp.flags.urg -e tcp.analysis.bytes_in_flight -e udp.length -e udp.dstport -e udp.srcport
-
-echo -n "tshark -T fields -E header=y -E separator=, -E occurrence=a -E quote=d" ; for i in $(cat all_selected.txt); do echo -n " -e $i" ; done
