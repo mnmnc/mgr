@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-import protocol
+import protocols.protocol as protocol
 
-class IP(protocol.Protocol):
-	"""Class for managing wireshark filters for IP protocol (Internet Protocol).
+class Ethernet(protocol.Protocol):
+	"""Class for managing wireshark filters for Ethernet protocol (IEEE 802.3).
 
 	Dependencies:
 		Protocol class needs to be imported.
@@ -11,7 +11,7 @@ class IP(protocol.Protocol):
 		name - name of protocol
 		fields_selected - list of dictionaries
 		fields_available - list of dictionaries
-		
+
 	Functions available:
 		get_description( name ) 		-> String
 		get_names_available() 			-> List	
@@ -23,25 +23,33 @@ class IP(protocol.Protocol):
 	"""
 
 	def __init__(self):
-		self.name = "IP"
+		self.name = "Ethernet"
 		self.fields_selected = []
 
 	fields_available = [
 		{ 
-			"name" : "ip.src", 
-			"description" : "IP address of source."
+			"name" : "eth.dst", 
+			"description" : "MAC address of destination."
 		},
 		{
-			"name" : "ip.dst",
-			"description" : "IP address of destination."
+			"name" : "eth.src",
+			"description" : "MAC address of source."
 		},
 		{
-			"name" : "ip.ttl",
-			"description" : "TTL - time to live of packet. Decreased by every Layer 3 device."
+			"name" : "eth.lg",
+			"description" : "Whether the MAC address is globally unical."
 		},
 		{
-			"name" : "ip.proto",
-			"description" : "Protocol travelling inside IP packet."
+			"name" : "eth.ig",
+			"description" : "Whether this a unicast or broadcast."
 		}
 	]
+
+
+
+
+
+
+
+
 

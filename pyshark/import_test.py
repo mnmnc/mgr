@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import frame, ethernet, arp, ip, tcp, udp, http, dns
+import protocols.protocol as protocol
+from protocols import frame, ethernet, arp, ip, tcp, udp, http, dns
 
 # frame, eth, arp, ip, tcp, udp, http, dns
 

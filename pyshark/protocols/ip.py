@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
+import protocols.protocol as protocol
 
-import protocol
-
-class ARP(protocol.Protocol):
-	"""Class for managing wireshark filters for ARP protocol (Address Resolution Protocol).
+class IP(protocol.Protocol):
+	"""Class for managing wireshark filters for IP protocol (Internet Protocol).
 
 	Dependencies:
 		Protocol class needs to be imported.
@@ -12,7 +11,7 @@ class ARP(protocol.Protocol):
 		name - name of protocol
 		fields_selected - list of dictionaries
 		fields_available - list of dictionaries
-
+		
 	Functions available:
 		get_description( name ) 		-> String
 		get_names_available() 			-> List	
@@ -24,30 +23,25 @@ class ARP(protocol.Protocol):
 	"""
 
 	def __init__(self):
-		self.name = "ARP"
+		self.name = "IP"
 		self.fields_selected = []
 
 	fields_available = [
 		{ 
-			"name" : "arp.src.hw_mac", 
-			"description" : "MAC address of source."
-		},
-		{
-			"name" : "arp.src.proto_ipv4",
+			"name" : "ip.src", 
 			"description" : "IP address of source."
 		},
 		{
-			"name" : "arp.dst.hw_mac",
-			"description" : "MAC address of destination."
-		},
-		{
-			"name" : "arp.dst.proto_ipv4",
+			"name" : "ip.dst",
 			"description" : "IP address of destination."
 		},
 		{
-			"name" : "arp.opcode",
-			"description" : "1 -> Request. 2 -> Reply. 3 -> Reverse request. 4 -> Reverse reply."
+			"name" : "ip.ttl",
+			"description" : "TTL - time to live of packet. Decreased by every Layer 3 device."
+		},
+		{
+			"name" : "ip.proto",
+			"description" : "Protocol travelling inside IP packet."
 		}
 	]
 
-	

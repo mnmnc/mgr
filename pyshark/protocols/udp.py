@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-import protocol
+import protocols.protocol as protocol
 
-class Ethernet(protocol.Protocol):
-	"""Class for managing wireshark filters for Ethernet protocol (IEEE 802.3).
+class UDP(protocol.Protocol):
+	"""Class for managing wireshark filters for UDP protocol (User Datagram Protocol).
 
 	Dependencies:
 		Protocol class needs to be imported.
@@ -23,25 +23,21 @@ class Ethernet(protocol.Protocol):
 	"""
 
 	def __init__(self):
-		self.name = "Ethernet"
+		self.name = "UDP"
 		self.fields_selected = []
 
 	fields_available = [
 		{ 
-			"name" : "eth.dst", 
-			"description" : "MAC address of destination."
+			"name" : "udp.length", 
+			"description" : "Length of datagram."
 		},
-		{
-			"name" : "eth.src",
-			"description" : "MAC address of source."
+		{ 
+			"name" : "udp.dstport", 
+			"description" : "Destination port for datagram."
 		},
-		{
-			"name" : "eth.lg",
-			"description" : "Whether the MAC address is globally unical."
-		},
-		{
-			"name" : "eth.ig",
-			"description" : "Whether this a unicast or broadcast."
+		{ 
+			"name" : "udp.srcport", 
+			"description" : "Source port of datagram."
 		}
 	]
 

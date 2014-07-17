@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import protocol
+import protocols.protocol as protocol
 
 class DNS(protocol.Protocol):
 	"""Class for managing wireshark filters for DNS protocol (Domain Name System).
