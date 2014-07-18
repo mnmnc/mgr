@@ -43,6 +43,12 @@ class Protocol:
 		for field in self.fields_available:
 			self.select_field(field["name"])
 
+	def remove_all(self):
+		"""Removes all fields from selected list."""
+
+		for field in self.fields_selected:
+			self.remove_field(field["name"])
+
 	def remove_field(self, name):
 		"""Removes field specified by name, from a list of selected ones."""
 
