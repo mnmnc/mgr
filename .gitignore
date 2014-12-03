@@ -34,3 +34,10 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+xml/in.pcap
+xml/inf.xml
+xml/inf2.xml
+xml/inf3.xml
+xml/packet.xml
+xml/xml.py
